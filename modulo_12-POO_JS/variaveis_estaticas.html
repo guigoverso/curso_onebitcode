@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    class Spaceship {
+        // > Criando uma variável estática com o get
+        static get decelerationRate() {
+            return 0.15
+        }
+
+        constructor(name) {
+            this.name = name
+            this.currentVelocity = 0
+        }
+
+        speedUp(acceleration) {
+            this.currentVelocity += (acceleration * (1 - Spaceship.decelerationRate))
+        }
+    }
+
+    const spaceship = new Spaceship('Apollo')
+    spaceship.speedUp(100)
+    console.log(spaceship)
+</script>

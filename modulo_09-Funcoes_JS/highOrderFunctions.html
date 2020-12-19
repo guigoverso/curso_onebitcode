@@ -1,0 +1,30 @@
+<script>
+    // > Função que recebe ou retorna uma função
+    // > Geralmente recebem funções anônimas
+    // > O nome da função que é enviada como parâmetro é Callback
+
+    function doubleVelocity(vel, print) {
+        console.log('Entrei em dv')
+        let newVelocity = vel * 2
+        print(newVelocity)
+        return newVelocity
+    }
+
+    let printVelocity = vel => {
+        console.log('Nova velocidade: ' + vel + 'km/s')
+    }
+
+    let newVelocity = doubleVelocity(60, printVelocity)
+
+    console.log(newVelocity)
+
+    function nomeNave(nome, composicao) {
+        return composicao(nome)
+    }
+
+    let printNomeNave = nomeNave('Miku', (nome) => {
+        return 'O nome da nave é ' + nome
+    })
+
+    console.log(printNomeNave)
+</script>

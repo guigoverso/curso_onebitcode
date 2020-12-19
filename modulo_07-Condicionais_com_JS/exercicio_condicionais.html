@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Condicionais</title>
+    <script>
+        const name = prompt('Olá, piloto! Qual é seu nome?')
+        let spaceshipSpeed = 0
+        spaceshipSpeed = prompt('Para qual velocidade gostaria de acelerar a nave?')
+
+        let takeOff = confirm('A nave navegará em uma velocidade de ' + spaceshipSpeed + ' km/s, deseja confirmar?')
+        if(!takeOff) {
+            spaceshipSpeed = prompt('Por favor, digite a nova velocidade')
+        }
+
+        if(spaceshipSpeed < 0) {
+            alert('A nave está indo contrária a direção de destino. Considere atualizar para mudar a velocidade.')
+        } else if(spaceshipSpeed == 0) {
+            alert('A nave está parada. Considere atualizar e partir.')
+        } else if(spaceshipSpeed < 40) {
+            alert('A nave está devagar e pode navegar mais rápido.')
+        } else if(spaceshipSpeed >= 40 && spaceshipSpeed < 80) {
+            alert('A nave está na velocidade ideal.')
+        } else if(spaceshipSpeed >= 80 && spaceshipSpeed < 100) {
+            alert('Velocidade alta! Considere diminuir.')
+        } else {
+            alert('Velocidade acima do limite suportado. Iniciando controle automático forçado')
+            spaceshipSpeed = 60
+        }
+
+        alert(
+            'Piloto: ' + name +
+            '\nVelocidade da nave: ' + spaceshipSpeed + ' km/s'
+        )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

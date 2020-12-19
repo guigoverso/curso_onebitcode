@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício DOM</title>
+    <script src="exercicio_DOM.js"></script>
+</head>
+<body>
+    <h1>Lista de endereços</h1>
+    <div>
+        <form id="addNewAddress">
+            <label>Número da residência: </label>
+            <input type="number" name="numero">
+            <br>
+            <label>Bairro: </label>
+            <input type="text" name="bairro">
+            <br>
+            <label>Cidade: </label>
+            <input type="text" name="cidade">
+            <br>
+            <label>Área</label>
+            <input type="text" name="area">
+        </form>
+        <br>
+        <button onmousedown="addNewAddress()">Adicionar Endereços</button> | <button onmousedown="printAddress(listAddress)">Imprimir Endereços</button>
+    </div>
+    <hr>
+    <div>
+        <table border="1" id="addressTable">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Bairro</th>
+                    <th>Cidade</th>
+                    <th>Área</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>

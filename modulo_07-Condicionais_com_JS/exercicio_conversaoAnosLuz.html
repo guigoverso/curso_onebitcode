@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de anos-luz</title>
+    <script>
+        const distAnosLuz = prompt('Digite a distância em anos-luz')
+        const uniConversao = prompt('Para qual unidade deseja converter?\n\n1- Parsec(pc)\n2- Unidade astronômica(AU)\n3- Quilômetros(km)')
+
+        let distConvertida = 0
+        let mensagemConversao = ''
+
+        switch(uniConversao) {
+            case "1":
+                distConvertida = (distAnosLuz * 0.306601) + 'pc'
+                mensagemConversao = 'Parsec: ' + distConvertida
+                break
+            case "2":
+                distConvertida = (distAnosLuz * 63241.1) + 'AU'
+                mensagemConversao = 'Unidade Astronômica: ' + distConvertida
+                break
+            case "3":
+                distConvertida = (distAnosLuz * 9.5 * Math.pow(10, 12)) + 'Km'
+                mensagemConversao = 'Quilômetros: ' + distConvertida
+                break
+            default:
+                mensagemConversao = 'Unidade desconhecida: Conversão fora de escopo'
+                break
+        }
+
+        alert('Distância em anos-luz: ' + distAnosLuz + '\n' + mensagemConversao)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

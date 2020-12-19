@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício For</title>
+</head>
+<body>
+    <script>
+        const spaceshipName = prompt('Digite o nome da espaçonave')
+        const caractereSubstituir = prompt('Qual caractere deseja substituir?')
+        const caractereSubstituto = prompt('Por qual caractere deseja substituir?')
+        let newSpaceshipName = ''
+
+        for(let i = 0; i < spaceshipName.length; i++) {
+            newSpaceshipName += spaceshipName[i] == caractereSubstituir ? caractereSubstituto : spaceshipName[i]
+        }
+
+        alert('O novo nome da nave é: ' + newSpaceshipName)
+    </script>
+</body>
+</html>

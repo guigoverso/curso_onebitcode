@@ -1,0 +1,21 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    // > Métodos que são chamados diretos da classe sem precisar instancia-la  
+
+    class ResourceProcessorStation {
+        constructor(name, monthlyProcessing) {
+            this.name = name
+            this.monthlyProcessing = monthlyProcessing
+        }
+
+        static calculateProcessInHours(monthlyProcessing, hours) {
+            return monthlyProcessing / 720 * hours
+        }
+    }
+
+    // > Única forma de chamar um método estático
+    // > Mesmo se instanciar uma classe que tenha um método estático, não é possível chama-lo
+    const totalProcessing = ResourceProcessorStation.calculateProcessInHours(500, 6)
+
+    console.log(totalProcessing)
+</script>

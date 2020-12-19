@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    class TransportSpaceship {
+        constructor(name) {
+            this._name = name
+            this._currentVelocity = 0
+        }
+
+        set velocity(newVelocity) {
+            if(newVelocity > 120) {
+                this._currentVelocity = 120
+            } else {
+                this._currentVelocity = newVelocity
+            }
+        }
+
+        get name() {
+            return this._name
+        }
+    }
+
+    const spaceship = new TransportSpaceship('Transportador')
+
+    spaceship.velocity = 130
+    console.log(spaceship)
+    console.log(spaceship.name)
+</script>

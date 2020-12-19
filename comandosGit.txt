@@ -1,0 +1,38 @@
+ADICIONANDO ARQUIVOS
+> git init -> Inicia repositório Git
+> git add arquivo.txt -> Adiciona um arquivo
+> git status -> Mostra o status do repositório
+> git commit -m 'message' -> Comita o arquivo, manda pro git
+
+VISUALIZANDO LOGS (ALTERAÇÕES)
+> git log -> Mostra alterações do repositório
+> git log --pretty=oneline -> Mostra alterações em uma única linha
+> git log --stat -> Mostra alguns status detalhado do que foi feito
+
+VISUALIZANDO DIFERENÇAS
+> git diff nomeArquivo (opcional) -> Mostra o que mudou nos arquivos
+> git diff --name-only -> Mostra só o nome dos arquivos que tem diferenças/modificações
+
+MUDANDO COMMIT JÁ FEITO
+> git commit --amend -> muda a mensagem do último commit
+> git reset HEAD apollo12.txt -> Tira um arquivo antes de ser comitado
+> git checkout -- apollo12.txd -> Muda o arquivo para o que ele era no último commit
+
+BRANCHS (Ramos)
+# Subdivisão do projeto para desenvolver partes isoladas
+# Da Master cria um Ramo que depois é fundido na Master novamente
+> git branch -> lista branchs existe no projeto
+> git branch nomeBranch -> cria uma nova branch
+> git checkout nomeBranch -> muda de branch
+> git branch -D nomeBranch -> deleta uma branch
+> git checkout -b novaBranch -> Cria uma nova branch e muda pra ela
+
+MERGE
+# Envia as mudanças de uma branch para outra
+> git merge nomeBrench -> faz a adição de uma branch na atual
+
+COMANDOS GITHUB
+> git clone urlDoProjeto.git -> clona um projeto do git
+> git remote add origin urlDoRepositorio.git -> adiciona um projeto no PC ao GitHub
+> git push origin master -> sobe o repositório
+> git pull origin master -> puxa o código do repositório que foi indicado no "git remote add origin"

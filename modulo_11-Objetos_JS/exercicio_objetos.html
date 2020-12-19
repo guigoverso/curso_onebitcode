@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script>
+
+const spaceship = new Object()
+
+spaceship.name = prompt('Digite o nome da nave')
+spaceship.type = prompt('Digite o tipo da nave')
+spaceship.maxVel = prompt('Digite a velocidade máxima que a nave pode chegar')
+spaceship.vel = 0
+
+menuNavegacao(spaceship)
+
+function menuNavegacao(spaceship) {
+    const menu = 'Você deseja acelerar ou para a nave?\n1- Acelerar\n2- Parar'
+    const opcao = prompt(menu)
+
+    switch(opcao) {
+        case '1':
+            const aceleracao = prompt('Quanto deseja acelerar?')
+            spaceship.vel += parseInt(aceleracao)
+            if(spaceship.vel > spaceship.maxVel) {
+                alert('Velocidade máxima foi atingida')
+                spaceship.vel = spaceship.maxVel
+            }
+            menuNavegacao(spaceship)
+        case '2':
+            alert(`Dados da nave:\nNome: ${spaceship.name}\nTipo: ${spaceship.type}\nVelocidade Máxima: ${spaceship.maxVel}\nVelocidade Atingida: ${spaceship.vel}`)
+            break
+        default:
+            alert('Opção inválida, tente novamente.')
+            menuNavegacao(spaceship)
+    }
+}
+
+</script>

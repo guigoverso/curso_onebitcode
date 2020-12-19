@@ -1,0 +1,15 @@
+<script>
+    const abrirComportas = (velInicial, desacelerarNave) => {
+        let velocidadeAtual = velInicial
+        while(velocidadeAtual > 0) {
+            alert('Velocidade da nave: ' + velocidadeAtual + 'km/s')
+            velocidadeAtual = desacelerarNave(velocidadeAtual)
+        }
+
+        alert('A nave está parada. As comportas podem ser abertas.')
+    }
+
+    const desacelerarNave = velocidadeAtual => velocidadeAtual - 20 > 0 ? velocidadeAtual -= 20 : velocidadeAtual = 0
+
+    abrirComportas(150, desacelerarNave)
+</script>

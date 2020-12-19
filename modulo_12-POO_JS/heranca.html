@@ -1,0 +1,63 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    class Spaceship {
+        constructor(name, maxCrew, maxRecommendedVelocity) {
+            this.name = name
+            this.maxCrew = maxCrew
+            this.maxRecommendedVelocity = maxRecommendedVelocity
+            this.currentVelocity = 0
+        }
+
+        speedUp(acceleration) {
+            this.currentVelocity += acceleration
+            if(this.currentVelocity > this.maxRecommendedVelocity) {
+                alert('Velocidade máxima ultrapassada')
+            }
+        }
+
+        stop() {
+            alert('Parando a nave')
+        }
+    }
+
+    // > Herdando da classe Spaceship
+    class BattleSpaceship extends Spaceship{
+        stop() {
+            this.currentVelocity = 0
+            alert('Recolhendo armas e parando nave de batalha')
+        }
+    }
+
+    class DiscoverySpaceship extends Spaceship {
+        stop() {
+            this.currentVelocity = 0
+            alert('Recolhendo equipamentos de amostras e parando nave de descoberta')
+        }
+    }
+
+    class TransportSpaceship extends Spaceship {
+        constructor(name, maxCrew, maxRecommendedValue, maxLoadWeight) {
+            super(name, maxCrew, maxRecommendedValue)
+            
+            this.maxLoadWeight = maxLoadWeight
+        }
+
+        speedUp(acceleration) {
+            acceleration /= 2
+            alert('Incrementando velocidade em ' + acceleration + 'km/s')
+            super.speedUp(acceleration )
+        }
+    }
+
+    const darwin = new DiscoverySpaceship('Darwin', 10, 200)
+    const fenix = new BattleSpaceship('Fenix', 8, 240)
+    const transportSpaceship = new TransportSpaceship('Transportadora', 4, 100, 400)
+
+    console.log(darwin)
+    console.log(fenix)
+    console.log(transportSpaceship)
+    
+    transportSpaceship.speedUp(210)
+
+    
+</script>

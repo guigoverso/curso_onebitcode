@@ -1,0 +1,38 @@
+<script>  
+    function splice() {
+        // SPLICE
+        // > Substitui o array original
+        // > Parametros:
+            // > 1 - Índice do array
+            // > 2 - Quantidade de elementos a serem removidos a partir desse índice
+            // > 3 - Elementos que queros adicionar no lugar
+            // > Nota: apenas o primeiro é obrigatório
+
+        let spaceshipNames = ['Elemental', 'Darwin', 'Ártemis', 'Supernova']
+    
+        console.log(spaceshipNames)
+    
+        removedSpaceships = spaceshipNames.splice(1, 2, 'Deméter', 'Puller', 'Golias')
+        
+        console.log(spaceshipNames)
+        console.log(removedSpaceships)
+    }
+
+    function slice() {
+        // SLICE
+        // > Extrai uma parte do array sem altera-lo
+        // > Parâmetros
+            // > 1 - Início da extração
+            // > 2 - Índice final
+            // Nota: Extrai do índice indicado até o anterior ao índice final
+
+        let spaceshipNames = ['Elemental', 'Darwin', 'Ártemis', 'Supernova']
+        let extractedNames = spaceshipNames.slice(1, 3)
+
+        console.warn(spaceshipNames)
+        console.warn(extractedNames)
+    }
+
+    splice()
+    slice()
+</script>

@@ -1,0 +1,30 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    class SpacialStation {
+        // > Variáveis
+        constructor(name, platformsQuantity, type = "Descoberta") {
+            this.name = name
+            this.platformsQuantity = platformsQuantity
+            this.type = type
+        }
+    }
+
+    const observatory = new SpacialStation('Observatório', 40)
+    console.log(observatory)
+
+    class Spacechip {
+        constructor(name) {
+            this.name = name
+            this.velocity = 0
+        }
+
+        speedUp(acceleration) {
+            this.velocity += acceleration
+        }
+    }
+
+    const artemis = new Spacechip('Ártemis')
+    artemis.speedUp(200)
+    artemis.speedUp(130)
+    console.warn(artemis)
+</script>

@@ -1,0 +1,103 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    class Spaceship {
+        static get decelerationRate() {
+            return 0.17
+        }
+
+        constructor(name, qntCrew) {
+            this._name = name
+            this._qntCrew = qntCrew
+            this._velocity = 0
+        }
+
+        acelerarNave(acceleration) {
+            this._velocity += acceleration * (1 - Spaceship.decelerationRate)
+        }
+
+        get name() {
+            return this._name
+        }
+
+        get qntCrew() {
+            return this._qntCrew
+        }
+
+        get velocity() {
+            return this._velocity
+        }
+    }
+
+    class BattleSpaceship extends Spaceship {
+        constructor(name, qntCrew, qntWeapons) {
+            super(name, qntCrew)
+            this._qntWeapons = qntWeapons
+        }
+    }
+
+    class TransportSpaceship extends Spaceship {
+        constructor(name, qntCrew, numberSeats) {
+            super(name, qntCrew)
+            this._numberSeats = numberSeats
+        }
+    }
+
+    function newSpaceship() {
+        const name = prompt('Digite o nome da nave')
+        const qntCrew = prompt('Digite a quantidade de tripulantes')
+        const shipType = prompt('Digite o tipo da nave\n\n1- Batalha\n2- Transporte')
+
+        if(shipType == 1) {
+            const qntWeapons = prompt('Digite a quantidade de armas')
+            return new BattleSpaceship(name, qntCrew, qntWeapons)
+        } else if(shipType == 2) {
+            const numberSeats = prompt('Digite a quantidade de assentos')
+            return new TransportSpaceship(name, qntCrew, numberSeats)
+        } else {
+            alert('Opção de nave inválida. Reiniciando sistema')
+            newSpaceship()
+        }
+    }
+
+    function printMenu() {
+        const option = prompt('1- Acelerar Nave\n2- Trocar de Nave\n3- Imprimir e sair')
+        return option
+    }
+
+    function acelerarNave(spaceship) {
+        const acceleration = Number(prompt('O quanto você deseja acelerar?'))
+        spaceship.acelerarNave(acceleration)
+    }
+
+    function printNave(spaceship) {
+        alert(spaceship.name.toUpperCase() + '\nQuantidade de tripulantes: ' + spaceship.qntCrew + '\nVelocidade: ' + spaceship.velocity + 'km/s')
+    }
+
+    function programa() {
+        alert('Iniciando programa')
+        let spaceship = newSpaceship()
+        let continueProgram = true
+
+        while(continueProgram) {
+            const option = printMenu()
+
+            switch(option) {
+                case '1':
+                    acelerarNave(spaceship)
+                    break
+                case '2':
+                    spaceship = newSpaceship()
+                    break
+                case '3':
+                    printNave(spaceship)
+                    continueProgram = false
+                    break
+                default:
+                    alert('Opção inválida')
+                    break                   
+            }
+        }
+    }
+
+    programa()
+</script>

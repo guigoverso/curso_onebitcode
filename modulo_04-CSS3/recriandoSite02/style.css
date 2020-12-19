@@ -1,0 +1,27 @@
+div.post-container {
+    margin: auto;
+    background-color:#fffafa;
+    width: 70%;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+div.post {
+    margin-left: 50px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+p.date {
+    color: rgb(0, 128, 128);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+div.post-content p {
+    line-height: 1.5;
+    width: 90%;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Final</title>
+</head>
+<body>
+    <script>
+        const spaceshipName = prompt('Digite o nome da espaçonave')
+        const caractereProibido = 'e'
+        let newSpaceshipName = ''
+    
+        for(let i = spaceshipName.length - 1; i >= 0; i--) {
+            if(spaceshipName[i] != caractereProibido && spaceshipName[i] != caractereProibido.toUpperCase()) {
+                newSpaceshipName += spaceshipName[i]
+            } else {
+                break
+            }
+        }
+
+        alert('Nome original da nave: ' + spaceshipName + '\nNovo após a ocultação: ' + newSpaceshipName)
+    </script>
+</body>
+</html>

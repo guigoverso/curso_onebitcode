@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JavaScript</title>
+</head>
+<body>
+    <form>
+        <select name="select-option">
+            <option value="opcao_01">Opção 01</option>
+            <option value="opcao_02">Opção 02</option>
+        </select>
+    </form>
+    <script>
+        document.querySelector('select[name="select-option"]').addEventListener('change', function() {
+            alert(event.target.value)
+        })
+    </script>
+    <p class="text">
+        Texto
+    </p>
+</body>
+</html>

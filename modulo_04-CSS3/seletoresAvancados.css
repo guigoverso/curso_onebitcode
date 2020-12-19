@@ -1,0 +1,23 @@
+/* > Seleciona todos os elementos do documento e aplica um estilo */
+* {}
+
+/* > Seletor de descendência
+   > Selecionará todos os 'a' dentro de 'li '*/
+li a {}
+
+/* > Seletor filho
+   > Todo 'a' que for um filho direto de 'li' receberá esse estilo */
+li > a {}
+
+/* > Seletor adjacente
+   > Coloca estilo em todo 'h4' que vem logo depois de um 'h1' */
+
+h1 + h4 {}
+
+/* > Seletor de atributo
+   > Busca em todos os 'a' que tenha um 'href' com o valor '/recibo' */
+a[href='/recibo'] {}
+
+/* > Pseudoclasse selecionar filho
+   > Seleciona 'li' que é o segundo filho */
+li:nth-of-type(2) {}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Imóveis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="imovel.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Sistema de Imóveis</h1>
+    <h3>Cadastrar novo imóvel</h3>
+    <form onsubmit="app.adicionarImovel()" id="formNovoImovel">
+        <label>Título</label>
+        <input type="text" name="tituloImovel" required>
+        <span> | </span>
+        <label>Tipo: </label>
+        <select name="tipoImovel">
+            <option value="Casa">Casa</option>
+            <option value="Apartamento">Apartamento</option>
+        </select>
+        <span> | </span>
+        <label>Área: </label>
+        <input type="number" name="areaImovel" required>
+        <span> | </span>
+        <label>Alugado: </label>
+        Sim <input type="radio" name="alugado" value="true">
+        Não <input type="radio" name="alugado" value="false" checked>
+        <br>
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <hr>
+    <h3>Lista de Imóveis</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Disponibilidade</th>
+                <th>Título</th>
+                <th>Tipo</th>
+                <th>Área</th>
+            </tr>
+        </thead>
+        <tbody id="listaImoveis">
+        </tbody>
+    </table>
+</body>
+</html>

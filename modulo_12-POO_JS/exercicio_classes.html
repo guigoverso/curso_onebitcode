@@ -1,0 +1,61 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    class Spaceship {
+        constructor(name, qntCrew) {
+            this.name = name
+            this.qntCrew = qntCrew
+            this.engatada = false
+            this.portasAbertas = false
+        }
+
+        engatar() {
+            this.engatada = this.portasAbertas = true
+        }
+
+        relatorio() {
+            return `Nome: ${this.name}\nQnt. Tripulantes: ${this.qntCrew}\nNave Engatada: ${this.engatada}\nPortas abertas: ${this.portasAbertas}`
+        }
+    }
+
+    function menu(estacaoEspacial) {
+        const option = prompt('Digite a opção desejada\n\n1- Realizar engate\n2- Imprimir naves\n3- Sair do programa')
+        let encerrarPrograma = false
+        do {
+            switch(option) {
+                case '1':
+                    estacaoEspacial.push(realizarEngate())
+                    break
+                case '2':
+                    alert(imprimirNaves(estacaoEspacial))
+                    break
+                case '3':
+                    alert('Programa encerrado')
+                    encerrarPrograma = true
+                    break
+                default:
+                    alert('Opção inválida, tente novamente.')
+                    break
+            }
+        } while(!encerrarPrograma)
+    }
+
+    function realizarEngate() {
+        const nome = prompt('Digite o nome da nova nave')
+        const qntCrew = prompt('Digite a quantidade de tripulantes da nova nave')
+        const spaceship = new Spaceship(nome, qntCrew)
+        const engatarNave = confirm('Deseja engatar nave?')
+        if(engatarNave) {
+            spaceship.engatar()
+        }
+        
+        return spaceship
+    }
+
+    function imprimirNaves(estacaoEspacial) {
+        const listaNaves = estacaoEspacial.map((nave) => nave.name)
+        return listaNaves.join(', ').toUpperCase()
+    }
+
+    const estacaoEspacial = new Array()
+    menu(estacaoEspacial)
+</script>

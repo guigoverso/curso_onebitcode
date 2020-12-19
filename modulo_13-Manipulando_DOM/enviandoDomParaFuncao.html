@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviando o DOM para a função</title>
+    <script>
+        function sayMyFirstName(element) {
+            alert('Meu primeiro nome é ' + element.value)
+        }
+
+        function sayMyLastName() {
+            console.log(event)
+            alert('Meu último nome é ' + event.target.value)
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            <label>Nome: </label>
+            <input type="text" name="first-name" onchange="sayMyFirstName(this)">
+        </p>
+        <p>
+            <label>Sobrenome: </label>
+            <input type="text" name="last-name" onchange="sayMyLastName()">
+        </p>
+    </form>
+</body>
+</html>

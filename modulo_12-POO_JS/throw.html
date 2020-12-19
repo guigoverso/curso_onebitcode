@@ -1,0 +1,41 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    class SpaceshipWeapon {
+        constructor(identifier) {
+            this.identifier = identifier
+            this.shotsLeft = 5
+        }
+
+        shoot() {
+            if(this.shotsLeft > 0) {
+                console.log('Bang')
+                this.shotsLeft -= 1
+            } else {
+                // Instanciando erro
+                throw new Error('Arma' + this.identifier + ' sem munição')
+            }
+        }
+
+        reload() {
+            this.shotsLeft = 5
+        }
+    }
+
+    const fenixWeapon = new SpaceshipWeapon(10)
+
+    try {
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+    } catch(error) {
+        console.log(error.message)
+        fenixWeapon.reload()
+    } finally {
+        console.log('Tudo ok')
+    }
+
+    console.log(fenixWeapon)
+</script>
