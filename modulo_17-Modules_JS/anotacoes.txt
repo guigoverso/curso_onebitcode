@@ -16,9 +16,18 @@ EXPORTANDO DEFAULT
 # export default //o_que_vai_ser_exportado
 # export default {//comandos}
 
+EXPORT NOMEADO
+# export { arquivo, arquivo }
+
 IMPORTANDO MÓDULOS
 > O require já reconhece o caminho de "node_modules" por padrão
 # const variavel = require(//caminho_do_modulo)
 
 IMPORTANDO DEFAULT
 # import nome from './caminho'
+
+IMPORT NOMEADO
+# import { arquivo, arquivo } from "./caminho"
+> Deve ser usado no import o mesmo nome no export
+# import {arquivo as newName} from './path'
+    > New name for a named import

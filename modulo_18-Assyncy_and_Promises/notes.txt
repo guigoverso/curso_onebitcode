@@ -1,0 +1,35 @@
+EXECUÇÃO SÍNCRONA
+> Fluxo linear
+> Executa passo a passo do código
+> Só executa uma instrução após a anterior estiver concluída
+
+EXECUÇÃO ASSÍNCRONA
+> Não aguarda o fim de uma execução para ser executada
+
+PROMISES
+> Usado para operações assíncronas
+> Guarda a operação dentro de um objeto de classe Promise
+> Quando precisamos executar a operação, chamamos o objeto
+> Estados:
+    > Pendente - Criada e não executada
+    > Realizada - Sucesso na operação
+    > Recusada - Falha na operação
+    > Estabelecida - Realizada ou Recusada
+> O programador decide se ela vai ser Realizada ou Recusada
+> Quando o código econtra uma Promise, ele continua a execução
+# new Promise(function(resolve, rejection){
+    // Comandos
+})
+
+THEN EM PROMISES
+> Função que é executada após uma promise retornar Resolve()
+# codigoComPromise().then(parametro => {
+    // comandos
+})
+    > A promise dentro do código precisa ter um retorno
+
+CATCH EM PROMISES
+> Função que é executada após uma promise retornar Reject()
+# codigoComPromise().catch(erro => {
+    // comandos
+})
