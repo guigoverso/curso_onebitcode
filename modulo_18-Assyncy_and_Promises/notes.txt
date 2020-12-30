@@ -33,3 +33,6 @@ CATCH EM PROMISES
 # codigoComPromise().catch(erro => {
     // comandos
 })
+
+RETORNO DA PROMISES
+> Sempre retorna outra promise

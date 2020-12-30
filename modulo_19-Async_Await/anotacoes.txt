@@ -1,0 +1,33 @@
+PREPARANDO O AMBIENTE
+> Pacotes necessários
+    #npm install core-js@3 regenerator-runtime --save
+> No "Index.js"
+    #import "core-js"
+    #import "regenerator-runtime/runtime"
+> Ambos os pacotes precisam ser enviados a produção
+
+O QUE SÃO ASYNC FUNCTIONS
+> Funções que lidam com ações assíncronas
+> Retornam promises
+    > Evitam ficar instanciando promise
+> Basicamente uma promise mais enxuta
+# async function nomeFuncao(parametos) {
+    // comandos
+    return //then()
+}
+
+TRATANDO ERROS EM ASYNC FUNCTIONS
+> Usa-se uma função estática das próprias promises
+# return Promise.reject(error)
+
+AWAIT
+> Palavra-chave dentro de uma Async Function
+> Função de aguardar o resultado de uma Promise
+# let retornoPromise = await funcao()
+> Esse retorno é o resolve()
+> Para tratamento de erro utiliza-se o try catch
+    # try {
+        //execucao da promise e await
+    } catch(error) {
+        //error é o retorno da Promise.reject()
+    }
