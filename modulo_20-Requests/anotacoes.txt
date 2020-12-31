@@ -1,0 +1,20 @@
+API (APPLICATION PROGRAMMING INTERFACE)
+> Meio comunicação entre dois sistemas
+    > Utilizar funcionalidade de outros
+    > Usar e enviar dados de outro sistema
+> Em browsers é uasdo APIs RESTful
+
+API REST (REPRESENTATIONAL STATE TRANSFER)
+> Modelo com regras e padrões para a criação de APIs bem definidas
+> Utilização do HTTP
+    > Get, Post, Patch/Put e Delete
+
+REQUISIÇÕES COM API
+> Requisição normal com URL
+    > Requisição HTTP que retorna uma página Web
+> Requisção de URL com API
+    > Retorna dados (JSON, XML, etc)
+
+REQUISIÇÕES GET (ES6)
+> Retorna uma promise
+> Dentro do resolve() há um objeto com resposta da API
